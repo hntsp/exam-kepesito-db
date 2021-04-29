@@ -38,7 +38,7 @@ public class JurassicPark {
             ResultSet resultSet = statement.executeQuery();
 
             while (resultSet.next()) {
-                dinosaur = Collections.singletonList(resultSet.getString("breed"));
+                dinosaur.add(resultSet.getString("breed"));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
